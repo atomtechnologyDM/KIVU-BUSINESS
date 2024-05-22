@@ -20,56 +20,12 @@ html::-webkit-scrollbar{
   background: var(--third);
   }
 
-  
-#button-menu{
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 50%;
-    transition: all 30ms;
-    font-size: 30px;
-  }
-  #button-menu:hover{
-     transform: scale(0.9);
-  }
-  #button-menu span{
-    color: var(--use);
-    font-weight: 900;
-  }
-  .navbar-brand img{
-    filter: contrast(150%);
-    transform: scale(1.1);
-    animation: anim-log 5s linear infinite;
-    transition: 3ms;
-  }
    
    @keyframes anim-log {
     0%{transform: rotate(0deg); opacity: 1; transform: scale(1.1);}
     50%{transform: rotate(3deg); opacity: 0.3; transform: scale(0.9);}
     100%{transform: rotate(-3deg); opacity: 1; transform: scale(1.1);}
    }
-
-  nav{
-    min-height: 30px;
-    height: fit-content;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-  }
-
-  
-  #menu-bar a ul li{
-  list-style: none;
-  margin-left: 10px;
-  }
-  #menu-bar a ul{
-  display: flex;
-  }
-
-
-  
-
-
 /* animation section */
 
   @keyframes slideText {
@@ -93,89 +49,98 @@ html::-webkit-scrollbar{
     
 
 
-  .sliding-text-container {
-    position: fixed;
-    width: 200px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-    overflow: hidden;
-    border: 1px solid #090909; 
-    color: var(--use);
-    background-color: var(--main);
-    right: 0; /* Float the container to the right */
-    top: 20vh;
-   box-shadow: 4px 5px 4px black;
-   z-index: 996;
-   display: none;
-  }
-  
-  .sliding-text {
-    white-space: nowrap; /* Prevent text from wrapping */
-    animation: slideText 15s linear infinite; /* Adjust duration (20s) as needed */
-  }
 
 
 
-    .navbar{
-        z-index: 997;
-        animation: slideInTop 0.50s ease forwards;
-        position: fixed;
-        top: 0px;
-      }
-      @keyframes slideInTop {
-        from {
-          opacity: 0;
-        }
-        to {
-          opacity: 1;
-        }
-      }
-      #menu-bar{
-        position: fixed;
-        width: 100%;
-        top: -80vh;
-        right: 0vw;
-        text-align: center;
-        background: linear-gradient(60deg,rgb(0, 0, 0),rgba(33, 33, 33, 0.999),rgb(29, 29, 29));
-        border-top-left-radius: 20px;
-        border-bottom-left-radius: 20px;
-        transition: all 0.40s;
-        z-index: 999;
-       }
-       #menu-bar a{
-       padding: 5px;
-       text-decoration: none;
-       margin: 0;
-       }
-       #menu-bar a ul li{
-       color: var(--use);
-       list-style: none;
-       margin-left: 10px;
-       font-size: medium;
-       font-family: 'Montserrat';
-       letter-spacing: 2px;
-       font-size: 16px;
-       }
-  
-       #menu-bar a ul{
-       display: flex;
-       padding: 6px;
-       transition: all 0.40s;
-       margin: 0;
-       }
-       #menu-bar a:hover ul{
-       background-color: rgba(69, 65, 65, 0.84);
-       transform: scale(0.98);
-       border-radius: 10px;
-       }
-       #icon-m{
-        transition: all 0.50s;
-       }
+/* NAVIGATION MENU */
+
+.menu-bar{
+
+display: none;
+
+}
+#button-menu{
+  display: none;
+}
+
+#navigation-bar-phone{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  position: fixed;
+  padding: 3%;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  border-top: solid var(--second) 5px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: 'Montserrat';
+  transition: all 0.40s;
+  z-index: 99;
+}
+
+#navigation-bar-phone .menu-principal{
+background-color: var(--second);
+padding: 30px;
+padding: 20px;
+width: 15%;
+border-radius: 10px;
+
+}
+#navigation-bar-phone .menu-principal a{
+color: white;
+font-family: 'Montserrat';
+text-decoration: none;
+}
+#navigation-bar-phone .menu-principal i{
+color: white;
+font-weight: bold;
+
+}
+
+
+#navigation-bar-phone #phone-nav{
+display: flex;
+flex-direction: column-reverse;
+padding: 5px;
+margin: 1%;
+font-size: 12px;
+transition: all 0.50s;
+}
+
+#navigation-bar-phone #phone-nav:hover{
+transform: scale(1.1);
+}
+
+#navigation-bar-phone .ph a{
+color: var(--second);
+text-decoration: none;
+}
+#navigation-bar-phone .ph i{
+color: var(--third);
+font-weight: bold;
+}
 
 
 
 
 
+
+
+/* ======================================================================================================= */
+/* ======================================================================================================= */
+/* ======================================================================================================= */
        
+
+
+
+
+
+
+
+
 
    /* ==================== FOOTER ==================== */
 
@@ -281,93 +246,107 @@ width: 40%;
 
 
 @media screen and (min-width: 971px) {
-  .sliding-text-container {
-    position: fixed;
-    width: 200px; /* Adjust width as needed */
-    height: 40px; /* Adjust height as needed */
-    overflow: hidden;
-    border: 1px solid #090909; /* Optional: Add border for the box */
-    border-bottom-left-radius: 20px;
-    color: var(--use);
-    background-color: var(--main);
-    right: 0; /* Float the container to the right */
-    top:18vh;
-   box-shadow: 4px 5px 4px black;
-   z-index: 999;
-  }
-  
-  .sliding-text {
-    white-space: nowrap; /* Prevent text from wrapping */
-    animation: slideText 15s linear infinite; /* Adjust duration (20s) as needed */
-  }
-  
-
-    nav{
-        min-height: 20px;
-        height: 120px;
-        width: 100%;
-        
-      }
-      .navbar{
-        position: fixed;
-        top: 0px;
-        z-index: 1000;
-      }
-      #button-menu{
-        display: none;
-      }
-  
-     .menu-bar{
-      display: flex;
-      justify-content: space-around;
-      width: fit-content;
-      position: fixed;
-      text-align: center;
-      top: 3vh;
-      right: 5vh;
-      border-radius: 30px;
-      border-top-right-radius: solid rgba(0, 0, 0, 0.188) 1px;
-      z-index: 1001;
-     }
-     .menu-bar a{
-      
-      text-decoration: none;
-     }
-     .menu-bar a:hover ul li i{
-      border:  solid var(--second) 2px;
-      border-radius: 50%;
-      padding: 15px;
-      margin-top: 2px;
-      transform: scale(0.7);
-      transform-origin: top;
-      display: inline-block;
-     }
-     .menu-bar a:hover ul li{
-      color: var(--second);
-      transform: scale(0.9);
-     }
-     .menu-bar a ul li i{
-      color: rgba(234, 233, 226, 0.844);
-      transition: all 1s;
-      display: none;
-     }
-  
-    .menu-bar a ul{
-      display: flex;
-      flex-direction: column-reverse;
-    }
-   .menu-bar a ul li{
-    font-size: 18px;
-    transition: all 0.50s;
-    color: white;
-    font-family: "Lato", sans-serif;
-   }
-  
   
 
 
 
-   /* ==================== FOOTER ==================== */
+
+
+
+/* NAVIGATION MENU */
+
+
+#navigation-bar-phone{
+
+display: none;
+}
+
+.navbar{
+  
+  min-height: 20px;
+  height: 120px;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  z-index: 1000;
+}
+#button-menu{
+  display: none;
+}
+
+.menu-bar{
+display: flex;
+justify-content: space-around;
+width: fit-content;
+position: fixed;
+text-align: center;
+top: 3vh;
+right: 5vh;
+border-radius: 30px;
+border-top-right-radius: solid rgba(0, 0, 0, 0.188) 1px;
+z-index: 1001;
+}
+.menu-bar a{
+
+text-decoration: none;
+}
+.menu-bar a:hover ul li i{
+border:  solid var(--second) 2px;
+border-radius: 50%;
+padding: 15px;
+margin-top: 2px;
+transform: scale(0.7);
+transform-origin: top;
+display: inline-block;
+}
+.menu-bar a:hover ul li{
+color: var(--second);
+transform: scale(0.9);
+}
+.menu-bar a ul li i{
+color: rgba(234, 233, 226, 0.844);
+transition: all 1s;
+display: none;
+}
+
+.menu-bar a ul{
+display: flex;
+flex-direction: column-reverse;
+}
+.menu-bar a ul li{
+font-size: 18px;
+transition: all 0.50s;
+color: white;
+font-family: "Lato", sans-serif;
+list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* ======================================================================================================= */
+/* ======================================================================================================= */
+/* ======================================================================================================= */
+       
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==================== FOOTER ==================== */
 
 
 
